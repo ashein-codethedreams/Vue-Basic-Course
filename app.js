@@ -4,6 +4,7 @@ const app = Vue.createApp({
       title: "Student",
       name: "Hla Hla",
       age: 23,
+      show: true,
     };
   },
 });
@@ -15,6 +16,12 @@ const profile = Vue.createApp({
       category: "spicy",
       price: 1200,
     };
+  },
+  methods: {
+    IncreasePrice() {
+      this.price += 100;
+      alert("price will increase");
+    },
   },
 });
 profile.mount("#profile");
