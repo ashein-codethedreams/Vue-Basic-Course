@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- cdn link with version -->
     <script src="https://unpkg.com/vue@3.4.19"></script>
   </head>
   <body>
@@ -13,17 +14,22 @@
       <button v-on:click="show=!show">
         <span v-if="show">Hide</span><span v-if="!show">Show</span>
       </button>
+
       <div v-if="show">
         <h2>{{title}}</h2>
         <h4>My name is {{name}}</h4>
         <h4>Age - {{age}}</h4>
+        <!-- direct click event -->
         <button v-on:click="age++">Increase Age</button>
       </div>
     </div>
+
     <div id="profile">
       <h2>{{name}}</h2>
       <h4>Category - {{category}}</h4>
       <h4>Price - {{price}}</h4>
+
+      <!--  with method -->
       <button @click="IncreasePrice">Increase Price</button>
     </div>
 

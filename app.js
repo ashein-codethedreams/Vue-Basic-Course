@@ -4,7 +4,7 @@ const app = Vue.createApp({
       title: "Student",
       name: "Hla Hla",
       age: 23,
-      show: true,
+      show: true, //value for show div
     };
   },
 });
@@ -18,9 +18,10 @@ const profile = Vue.createApp({
     };
   },
   methods: {
+    //click event method
     IncreasePrice() {
-      this.price += 100;
-      alert("price will increase");
+      this.price += 100; // +100
+      //alert("price will increase");
     },
   },
 });
