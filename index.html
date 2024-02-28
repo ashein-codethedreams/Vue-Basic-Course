@@ -26,9 +26,13 @@
 
       <div v-if="show">
         <div v-for="info in infos">
-          <h2>{{info.title}}</h2>
-          <h4>My name is {{info.name}}</h4>
-          <h4>Age - {{info.age}}</h4>
+          <div v-if="info.showOne">
+            <h2>{{info.title}}</h2>
+            <h4>My name is {{info.name}}</h4>
+            <h4>Age - {{info.age}}</h4>
+            <button @click="info.showOne=false">hide this one</button>
+          </div>
+          <hr />
         </div>
 
         <!-- direct click event -->
