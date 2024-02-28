@@ -14,6 +14,7 @@ const app = Vue.createApp({
         },
       ],
       show: true, //value for show div
+      link: "http://www.google.com",
     };
   },
   methods: {
