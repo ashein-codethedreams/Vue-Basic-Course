@@ -13,6 +13,10 @@
         margin: 10px;
         display: inline-block;
       }
+
+      .presence {
+        background-color: cyan;
+      }
     </style>
   </head>
   <body>
@@ -26,7 +30,7 @@
 
       <div v-if="show">
         <div v-for="info in infos">
-          <div v-if="info.showOne">
+          <div :class="{presence:info.isPresence}" v-if="info.showOne">
             <h2>{{info.title}}</h2>
             <h4>My name is {{info.name}}</h4>
             <h4>Age - {{info.age}}</h4>

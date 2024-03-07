@@ -7,12 +7,14 @@ const app = Vue.createApp({
           name: "Hla Hla",
           age: 23,
           showOne: true,
+          isPresence: false,
         },
         {
           title: "Programmer",
           name: "Ashein",
           age: 25,
           showOne: true,
+          isPresence: true,
         },
       ],
       show: true, //value for show div
