@@ -32,6 +32,13 @@ const app = Vue.createApp({
       console.log("double ckicked");
     },
   },
+  computed: {
+    filteredPresence() {
+      return this.infos.filter((info) => {
+        return info.isPresence;
+      });
+    },
+  },
 });
 app.mount("#app");
 const profile = Vue.createApp({
