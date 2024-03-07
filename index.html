@@ -30,7 +30,11 @@
 
       <div v-if="show">
         <div v-for="info in infos">
-          <div :class="{presence:info.isPresence}" v-if="info.showOne">
+          <div
+            :class="{presence:info.isPresence}"
+            v-if="info.showOne"
+            @click="info.isPresence=!info.isPresence"
+          >
             <h2>{{info.title}}</h2>
             <h4>My name is {{info.name}}</h4>
             <h4>Age - {{info.age}}</h4>
